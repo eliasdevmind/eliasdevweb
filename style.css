@@ -1,0 +1,48 @@
+body{
+    display: flex; 
+    justify-content: center;
+    background-color: black;
+}
+.perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.perfilImg{
+    border: solid white 10px;
+    border-radius: 100px;
+}
+
+h1{
+    color: white;
+}
+
+
+.content{
+    display: flex;  
+    flex-direction: column;
+   
+  
+}
+
+
+.linksE{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+   
+}
+
+.linksE a{
+    padding: 0.5rem;
+    background-color: white;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+a span{
+ margin-right: 1.5rem;
+}
