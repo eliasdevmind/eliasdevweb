@@ -7,26 +7,35 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
 }
 .perfilImg{
-    border: solid white 10px;
+    border: solid white 5px;
     border-radius: 100px;
 }
 
 h1{
     color: white;
+    margin-top: 1rem;
+}
+
+p{
+    color: white;
+    text-align: center;
 }
 
 
 .content{
     display: flex;  
     flex-direction: column;
+    align-items: center;
    
   
 }
 
 
 .linksE{
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -35,12 +44,14 @@ h1{
 }
 
 .linksE a{
+    width: 20rem;
     padding: 0.5rem;
     background-color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     border-radius: 5px;
     display: flex;
     align-items: center;
+   
 }
 
 a span{
