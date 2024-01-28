@@ -1,17 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=PT+Serif&display=swap');
-
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     display: flex;
     box-sizing: border-box;
     align-items: center; 
-    background-color: #2D2A40;
+    background-color: #242331;
     height: 100vh;
 }
 .perfil{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
+   
     
+    
+}
+
+.tecnologias{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: rgb(252, 252, 253);
 }
 .perfilImg{
     border: solid white 5px;
@@ -30,7 +45,7 @@ p{
     text-align: center;
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
@@ -38,18 +53,18 @@ p{
     display: flex;  
     flex-direction: column;
     align-items: center;
-    margin: 0% 20%;
+    margin: 5% 20%;
+    gap: 20px;
    
   
 }
 
 
 .linksE{
-    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
     text-align: center;
-
+    gap: 20px;
    
 }
 
@@ -58,13 +73,16 @@ p{
     padding: 1rem;
     background-color: #3B128E;
     color: white;
-    margin-bottom: 1.5rem;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
+    gap: 20px;
+  
+    
+
 
    
 }
