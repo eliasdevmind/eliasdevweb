@@ -34,7 +34,7 @@ main {
 
 .binary {
     position: absolute;
-    color: rgba(0, 255, 0, 0.363);
+    color: rgba(0, 255, 0, 0.438);
     font-size: 16px;
     opacity: 0.3;
     animation: animateBinary 3s linear infinite;
