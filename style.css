@@ -1,33 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=PT+Serif&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s ease; /* Adiciona transição para todos os elementos */
 }
-body{ 
+
+body {
     background-color: #242331;
-    margin: 5% 10%;
-  
+    overflow-x: hidden; /* Esconde o overflow horizontal */
+    font-family: 'Montserrat', sans-serif; /* Aplica a fonte a todo o documento */
 }
 
-
-main{
+main {
+    position: relative; /* Alterado para relativo */
+    min-height: 100vh;
+    padding: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
-.perfil{
+
+.binary-container {
+    position: absolute; /* Alterado para absoluto */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Adicionado z-index */
+}
+
+.binary {
+    position: absolute;
+    color: rgba(0, 255, 0, 0.363);
+    font-size: 16px;
+    opacity: 0.3;
+    animation: animateBinary 3s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes animateBinary {
+    0% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(100vh - 5rem));
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    opacity: 0 !important;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.perfil {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-   
-    
-    
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem; /* Adiciona padding ao perfil */
+    background-color: rgba(255, 255, 255, 0.1); /* Adiciona cor de fundo com transparência */
+    border-radius: 10px; /* Adiciona raio da borda para cantos arredondados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adiciona sombra para profundidade */
 }
 
-.tecnologias{
+.tecnologias {
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
@@ -37,46 +86,38 @@ main{
     gap: 0.5rem;
     color: rgb(252, 252, 253);
 }
-.perfilImg{
+
+.perfilImg {
     border: solid white 5px;
     border-radius: 100px;
+    transition: transform 0.3s ease; /* Adiciona transição para dimensionamento suave da imagem */
 }
 
-h1{
+.perfilImg:hover {
+    transform: scale(1.1); /* Aplica transformação de escala no hover */
+}
+
+h1 {
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem; /* Aumenta o tamanho da fonte */
+    margin-bottom: 1rem;
 }
 
-p{
-    display: flex;
-    flex-wrap: wrap;
+p {
     color: white;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
-
-.content{
-    display: flex;  
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    height: 100vh;
-   
-  
-}
-
-
-.linksE{
+.linksE {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
-   
 }
 
-.linksE a{
+.linksE a {
     width: 22rem;
     padding: 1rem;
     background-color: #3B128E;
@@ -86,16 +127,21 @@ p{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
     gap: 1.5rem;
-  
-    
-
-
-   
+    transition: all 0.3s ease; /* Adiciona transição para animação suave */
 }
 
+.linksE a:hover {
+    background-color: #5227cc; /* Altera a cor de fundo no hover */
+    color: #fff; /* Altera a cor do texto no hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra na caixa no hover para profundidade */
+}
 
+.linksE a img {
+    transition: transform 0.3s ease; /* Adiciona transição para dimensionamento suave da imagem */
+}
 
-  
+.linksE a:hover img {
+    transform: scale(1.1); /* Aplica transformação de escala nas imagens no hover */
+}
 
