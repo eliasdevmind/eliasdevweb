@@ -1,0 +1,65 @@
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+.elemento_pricipal{
+    display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 5rem;
+
+}
+
+
+
+.card {
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.card .projeto {
+    width: 100%;
+    height: auto;
+}
+.card-content {
+    padding: 15px;
+}
+.card-content h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+.card-content .texto {
+    color: #bbaaaa;
+    font-size: 1em;
+    margin: 10px 0;
+}
+.card-content button {
+    background-color: #5227cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.card-content button:hover {
+    background-color: #3a3b3a;
+}
+
+h3{
+    color: white;
+}
+
+span{
+    display: flex;
+    align-items: center;
+}
