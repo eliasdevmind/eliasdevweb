@@ -22,6 +22,10 @@
     font-family: "Black Ops One", system-ui;
     font-weight: 400;
     font-style: normal;
+    position: fixed;
+
+
+   
    
     
   }
@@ -44,11 +48,9 @@ header {
 .logo {
     display: flex;
     align-items: center;
+   
 }
 
-.logo h1 {
-    color: #fff;
-}
 
 .nav-list {
     display: flex;
@@ -59,9 +61,12 @@ header {
     display: flex;
     justify-content: center;
     list-style: none;
+
+   
   
   
 }
+
 
 .nav-item {
     margin: 0 15px;
