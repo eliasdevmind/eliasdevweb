@@ -74,14 +74,14 @@ header {
     font-weight: 400;
 }
 
-.login-button button {
+.curriculo-button button {
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     background-color: #0187a7;
 }
 
-.login-button button a {
+.curriculo-button button a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
@@ -103,7 +103,7 @@ header {
     .nav-item {
         display: none;
     }
-    .login-button {
+    .curriculo-button {
         display: none;
     }
     .mobile-menu-icon {
@@ -124,11 +124,11 @@ header {
         display: block;
         padding-top: 1.2rem;
     }
-    .mobile-menu .login-button {
+    .mobile-menu .curriculo-button {
         display: block;
         padding: 1rem 2rem;
     }
-    .mobile-menu .login-button button {
+    .mobile-menu .curriculo-button button {
         width: 100%;
     }
     .open {
