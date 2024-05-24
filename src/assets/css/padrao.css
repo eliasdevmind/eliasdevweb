@@ -102,7 +102,7 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 930px) {
     .nav-bar {
         padding: 1.5rem 4rem;
     }
@@ -141,6 +141,12 @@ header {
     .open {
         display: block;
     }
+
+    #nome{
+        display: flex;
+        position: relative;
+        
+      }
 }
 
 
