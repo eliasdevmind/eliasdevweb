@@ -22,3 +22,8 @@ for (let i = 0; i < nome.length; i++) {
   }, delay);
   delay += 100; 
 }
+
+
+function openCurriculum() {
+  window.open('./assets/document/Currículo Elias Araujo.PDF', '_blank');
+}
