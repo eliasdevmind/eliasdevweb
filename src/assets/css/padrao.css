@@ -22,7 +22,8 @@
     font-family: "Black Ops One", system-ui;
     font-weight: 400;
     font-style: normal;
-    position: fixed;
+    position: absolute;
+    font-size: 1.3rem;
 
 
    
@@ -118,6 +119,7 @@ header {
         background-color: transparent;
         border: none;
         cursor: pointer;
+        
     }
     .mobile-menu ul {
         display: flex;
