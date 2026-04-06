@@ -48,31 +48,22 @@ function HeroSection({ heroMetrics }) {
               alt="Foto de perfil de Elias Araujo"
             />
           </div>
-
-          <div className="portrait-overlay-card">
-            <span className="panel-label">Resumo profissional</span>
-            <strong>Desenvolvimento com base em produto, dados e operacao.</strong>
-            <p>
-              Experiencia com PHP, Python, SQL, APIs, ETL, manutencao de sistemas
-              e automacao de rotinas para ganhar previsibilidade e escala.
-            </p>
-          </div>
         </div>
 
         <div className="surface-card hero-proof-card">
-          <span className="panel-label">Foco de atuacao</span>
+          <span className="panel-label">Leitura rapida</span>
           <div className="hero-proof-list" aria-label="Resumo tecnico">
             <div>
-              <span>Back-end e sistemas</span>
-              <strong>Modulos, APIs, SQL, ETL e manutencao evolutiva</strong>
+              <span>Experiencia pratica</span>
+              <strong>Modulos, APIs, SQL, ETL e manutencao de sistemas</strong>
             </div>
             <div>
-              <span>Projetos web</span>
-              <strong>Interfaces, areas administrativas e fluxos de produto</strong>
+              <span>Foco atual</span>
+              <strong>Projetos web, automacao e integracao entre sistemas</strong>
             </div>
             <div>
-              <span>Automacao</span>
-              <strong>Integracoes e rotinas para reduzir trabalho manual</strong>
+              <span>Estilo de entrega</span>
+              <strong>Clareza, organizacao tecnica e resultado funcional</strong>
             </div>
           </div>
         </div>

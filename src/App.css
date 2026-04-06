@@ -399,7 +399,6 @@
 
 .hero-portrait-shell {
   position: relative;
-  padding-bottom: 24px;
 }
 
 .hero-portrait-frame {
@@ -470,22 +469,6 @@
   border-width: 0 2px 2px 0;
 }
 
-.portrait-overlay-card {
-  position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 0;
-  z-index: 3;
-  display: grid;
-  gap: 10px;
-  padding: 20px 22px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  background: rgba(13, 17, 23, 0.92);
-  backdrop-filter: blur(12px);
-  box-shadow: var(--shadow);
-}
-
 .hero-summary-card,
 .hero-proof-card,
 .about-card,
@@ -507,7 +490,6 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
     rgba(13, 17, 23, 0.92);
 }
-.portrait-overlay-card strong,
 .hero-proof-list strong {
   font-family: 'Rajdhani', sans-serif;
   font-size: 1.5rem;
