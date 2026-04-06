@@ -36,35 +36,43 @@ function HeroSection({ heroMetrics }) {
       </div>
 
       <div className="hero-visual">
-        <div className="surface-card hero-summary-card">
-          <span className="panel-label">Resumo profissional</span>
-          <strong>Desenvolvimento com base em produto, dados e operacao.</strong>
-          <p>
-            Experiencia com PHP, Python, SQL, APIs, ETL, manutencao de sistemas
-            e automacao de rotinas para ganhar previsibilidade e escala.
-          </p>
-          <div className="hero-summary-list">
-            <span>Desenvolvimento web</span>
-            <span>APIs e integracoes</span>
-            <span>Banco de dados</span>
-            <span>Automacao com Python</span>
+        <div className="hero-portrait-shell">
+          <div className="hero-portrait-frame">
+            <span className="portrait-corner portrait-corner-tl" aria-hidden="true" />
+            <span className="portrait-corner portrait-corner-tr" aria-hidden="true" />
+            <span className="portrait-corner portrait-corner-bl" aria-hidden="true" />
+            <span className="portrait-corner portrait-corner-br" aria-hidden="true" />
+            <img
+              className="hero-portrait"
+              src="/profile-photo.png"
+              alt="Foto de perfil de Elias Araujo"
+            />
+          </div>
+
+          <div className="portrait-overlay-card">
+            <span className="panel-label">Resumo profissional</span>
+            <strong>Desenvolvimento com base em produto, dados e operacao.</strong>
+            <p>
+              Experiencia com PHP, Python, SQL, APIs, ETL, manutencao de sistemas
+              e automacao de rotinas para ganhar previsibilidade e escala.
+            </p>
           </div>
         </div>
 
         <div className="surface-card hero-proof-card">
-          <span className="panel-label">Leitura rapida</span>
+          <span className="panel-label">Foco de atuacao</span>
           <div className="hero-proof-list" aria-label="Resumo tecnico">
             <div>
-              <span>Experiencia pratica</span>
-              <strong>Modulos, APIs, SQL, ETL e manutencao de sistemas</strong>
+              <span>Back-end e sistemas</span>
+              <strong>Modulos, APIs, SQL, ETL e manutencao evolutiva</strong>
             </div>
             <div>
-              <span>Foco atual</span>
-              <strong>Projetos web, automacao e integracao entre sistemas</strong>
+              <span>Projetos web</span>
+              <strong>Interfaces, areas administrativas e fluxos de produto</strong>
             </div>
             <div>
-              <span>Estilo de entrega</span>
-              <strong>Clareza, organizacao tecnica e resultado funcional</strong>
+              <span>Automacao</span>
+              <strong>Integracoes e rotinas para reduzir trabalho manual</strong>
             </div>
           </div>
         </div>
