@@ -31,16 +31,6 @@ function ContactSection() {
           <span className="panel-label">LinkedIn</span>
           <strong>linkedin.com/in/eliasdevmind</strong>
         </a>
-
-        <div className="surface-card contact-card">
-          <span className="panel-label">Email</span>
-          <strong>Disponivel sob contato direto via LinkedIn</strong>
-        </div>
-
-        <div className="surface-card contact-card">
-          <span className="panel-label">Curriculo</span>
-          <strong>Disponivel para envio mediante solicitacao</strong>
-        </div>
       </div>
     </section>
   );
