@@ -12,11 +12,18 @@ function ProjectsSection({
   onPreviewLeave,
   previewPosition,
 }) {
+  if (!activeProject) {
+    return null;
+  }
+
   return (
     <section className="projects-section" id="projects">
       <div className="section-heading">
         <p className="eyebrow">Projetos</p>
         <h2>Cases com leitura premium e foco no problema resolvido.</h2>
+        <p>
+          Selecione um case para ver contexto, solucao aplicada e os pontos que sustentam a entrega.
+        </p>
       </div>
 
       <div className="filter-bar" role="tablist" aria-label="Filtrar projetos">
@@ -86,6 +93,11 @@ function ProjectsSection({
                 <span>{activeProject.mock.eyebrow}</span>
                 <span>{activeProject.mock.title}</span>
               </div>
+              <div className="project-preview-metrics">
+                {activeProject.mock.metrics.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
+              </div>
               <div className="project-preview-visual-grid">
                 {activeProject.mock.panels.map((panel) => (
                   <div className="project-preview-panel" key={panel.label}>
@@ -96,19 +108,21 @@ function ProjectsSection({
               </div>
             </div>
 
-            <div className="project-preview-block">
-              <span className="project-block-label">Problema</span>
-              <p>{activeProject.problem}</p>
-            </div>
+            <div className="project-facts-grid">
+              <div className="project-preview-block project-fact-card">
+                <span className="project-block-label">Problema</span>
+                <p>{activeProject.problem}</p>
+              </div>
 
-            <div className="project-preview-block">
-              <span className="project-block-label">Resultado</span>
-              <p>{activeProject.result}</p>
-            </div>
+              <div className="project-preview-block project-fact-card">
+                <span className="project-block-label">Resultado</span>
+                <p>{activeProject.result}</p>
+              </div>
 
-            <div className="project-preview-block">
-              <span className="project-block-label">Impacto</span>
-              <p>{activeProject.impact}</p>
+              <div className="project-preview-block project-fact-card project-fact-card-wide">
+                <span className="project-block-label">Impacto</span>
+                <p>{activeProject.impact}</p>
+              </div>
             </div>
 
             <div className="project-preview-block project-verification-block">
@@ -147,68 +161,50 @@ function ProjectsSection({
           </div>
         </article>
 
-        <div className="project-cards">
-          {filteredProjects.map((project, index) => {
-            const isActive = project.id === activeProject.id;
+        {filteredProjects.length > 0 ? (
+          <div className="project-cards">
+            {filteredProjects.map((project, index) => {
+              const isActive = project.id === activeProject.id;
 
-            return (
-              <button
-                key={project.id}
-                className={`surface-card project-card${isActive ? ' is-active' : ''}`}
-                type="button"
-                style={{ '--stagger-order': index }}
-                onMouseEnter={() => onProjectChange(project)}
-                onFocus={() => onProjectChange(project)}
-                onClick={() => onProjectChange(project)}
-              >
-                <div className="project-card-topline">
-                  <span className="project-number">{project.number}</span>
-                  <span className="project-badge">{project.badge}</span>
-                </div>
-                <div className={`project-card-mock is-${project.mock.accent}`} aria-hidden="true">
-                  <div className="project-card-mock-toolbar">
-                    <span />
-                    <span />
+              return (
+                <button
+                  key={project.id}
+                  className={`surface-card project-card${isActive ? ' is-active' : ''}`}
+                  type="button"
+                  style={{ '--stagger-order': index }}
+                  onMouseEnter={() => onProjectChange(project)}
+                  onFocus={() => onProjectChange(project)}
+                  onClick={() => onProjectChange(project)}
+                >
+                  <div className="project-card-topline">
+                    <span className="project-number">{project.number}</span>
+                    <span className="project-badge">{project.badge}</span>
+                  </div>
+                  <div className={`project-card-strip is-${project.mock.accent}`} aria-hidden="true">
                     <span />
                   </div>
-                  <div className="project-card-mock-header">
-                    <span>{project.mock.eyebrow}</span>
-                    <strong>{project.mock.title}</strong>
-                  </div>
-                  <div className="project-card-mock-metrics">
-                    {project.mock.metrics.map((item) => (
-                      <span key={item}>{item}</span>
+                  <strong>{project.title}</strong>
+                  <span className="project-role">{project.role}</span>
+                  <p>{project.summary}</p>
+                  <ul className="project-card-stack" aria-label={`Principais stacks de ${project.title}`}>
+                    {project.stack.slice(0, 4).map((item) => (
+                      <li key={item}>{item}</li>
                     ))}
+                  </ul>
+                  <div className="project-card-footer">
+                    <span>{project.category}</span>
+                    <span>{project.year}</span>
                   </div>
-                  <div className="project-card-mock-panels">
-                    {project.mock.panels.map((panel) => (
-                      <div key={panel.label}>
-                        <span>{panel.label}</span>
-                        <strong>{panel.value}</strong>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <strong>{project.title}</strong>
-                <span className="project-role">{project.role}</span>
-                <p>{project.summary}</p>
-                <div className="project-card-verification">
-                  <span className="project-status-pill">{project.status}</span>
-                  <span className="project-scope">{project.scope}</span>
-                </div>
-                <ul className="project-card-stack" aria-label={`Principais stacks de ${project.title}`}>
-                  {project.stack.slice(0, 3).map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <div className="project-card-footer">
-                  <span>{project.category}</span>
-                  <span>{project.year}</span>
-                </div>
-              </button>
-            );
-          })}
-        </div>
+                </button>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="surface-card project-empty-state">
+            <span className="project-block-label">Sem resultados</span>
+            <p>Nenhum projeto corresponde a esse filtro no momento. Tente outra stack ou volte para Todas.</p>
+          </div>
+        )}
       </div>
     </section>
   );
