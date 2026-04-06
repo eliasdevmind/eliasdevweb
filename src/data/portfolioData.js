@@ -37,21 +37,21 @@ export const projects = [
     title: 'Plataforma E-commerce',
     category: 'Web',
     year: '2026',
-    role: 'Front-end + Back-end + pagamentos',
+    role: 'Full stack com checkout e painel administrativo',
     summary:
-      'Estrutura de e-commerce com autenticacao, catalogo, painel administrativo, uploads e fluxo de pagamento.',
+      'Projeto de e-commerce com catalogo, autenticacao, painel administrativo e fluxo de checkout integrado.',
     problem:
-      'Necessidade de centralizar jornada de compra, cadastro de produtos e operacao em um fluxo unico e confiavel.',
+      'A operacao precisava reunir catalogo, gestao de produtos e jornada de compra em um fluxo unico e consistente.',
     result:
-      'Case completo para demonstrar arquitetura full stack, integracao com pagamentos e organizacao de produto.',
+      'Foi estruturada uma base full stack com navegacao de compra, autenticacao e organizacao administrativa do produto.',
     impact:
-      'Organiza a operacao comercial em uma estrutura unica, com fluxo de compra, autenticacao e administracao integrados.',
+      'O projeto consolida a operacao comercial em uma unica estrutura, facilitando manutencao, escala e clareza do fluxo.',
     status: 'Estrutura validada',
-    scope: 'Checkout, catalogo, autenticacao e painel',
+    scope: 'Catalogo, autenticacao, checkout e area administrativa',
     verification: [
-      'Fluxo principal de compra mapeado',
-      'Arquitetura separada entre front, API e dados',
-      'Integracao de pagamento prevista no fluxo real',
+      'Fluxo principal de compra definido de ponta a ponta',
+      'Separacao entre interface, API e camada de dados',
+      'Estrutura pronta para integracao com pagamento real',
     ],
     stack: ['Vue.js', 'Node.js', 'MySQL', 'JWT', 'Express', 'Mercado Pago'],
     mock: {
@@ -80,21 +80,21 @@ export const projects = [
     title: 'PC-RIK---MORY',
     category: 'Automacao',
     year: '2025',
-    role: 'Desktop app + API integration',
+    role: 'Aplicacao desktop com integracao de API',
     summary:
-      'Aplicativo desktop com interface em PySide6, listagem paginada, detalhes ricos e carregamento de dados de API.',
+      'Aplicacao desktop em PySide6 com listagem paginada, tela de detalhes e consumo organizado de API externa.',
     problem:
-      'Criar uma experiencia local responsiva com consumo de dados externos e fluxo claro de navegacao.',
+      'O objetivo era construir uma experiencia local fluida para consulta de dados externos, sem travar a navegacao.',
     result:
-      'Demonstra dominio em Python, interface grafica e integracao assíncrona para aplicacoes desktop.',
+      'Foi entregue uma interface desktop clara, com carregamento estruturado e separacao entre listagem e detalhamento.',
     impact:
-      'Entrega navegacao clara, leitura de dados externos e experiencia local consistente para uso continuo.',
+      'O resultado e uma aplicacao mais estavel para uso recorrente, com leitura simples e melhor experiencia de consulta.',
     status: 'Interface validada',
-    scope: 'Desktop UI, API publica e navegacao',
+    scope: 'Interface desktop, consumo de API e fluxo de navegacao',
     verification: [
-      'Listagem e detalhamento de registros separados',
-      'Interface responsiva em ambiente desktop',
-      'Consumo de API com carregamento organizado',
+      'Listagem e detalhamento separados em telas bem definidas',
+      'Interface responsiva no contexto desktop',
+      'Consumo de API tratado de forma organizada',
     ],
     stack: ['Python', 'PySide6', 'API REST', 'Requests', 'Threading', 'Qt'],
     mock: {
@@ -123,21 +123,21 @@ export const projects = [
     title: 'Rotinas Internas e Automacao',
     category: 'Sistemas',
     year: '2026',
-    role: 'Automacao operacional + dados',
+    role: 'Automacao operacional com integracao de dados',
     summary:
-      'Fluxos para reduzir tarefas repetitivas, integrar dados e apoiar operacao com mais controle e velocidade.',
+      'Conjunto de rotinas para reduzir tarefas manuais, integrar dados e dar mais previsibilidade a operacoes internas.',
     problem:
-      'Processos manuais, retrabalho e dependencia de execucao operacional constante.',
+      'A operacao dependia de execucao manual recorrente, com retrabalho e baixa previsibilidade entre etapas.',
     result:
-      'Automacoes e rotinas tecnicas que aumentam previsibilidade, organizacao e capacidade operacional.',
+      'Foram estruturadas automacoes e rotinas tecnicas para organizar fluxos, padronizar dados e reduzir dependencia manual.',
     impact:
-      'Reduz dependencia de tarefas manuais e melhora consistencia em processos internos e tratamento de dados.',
+      'O ganho principal esta na consistencia operacional, com menos repeticao manual e mais controle sobre os processos.',
     status: 'Processo validado',
-    scope: 'Automacao, integracao e tratamento de dados',
+    scope: 'Automacao de rotinas, integracoes e tratamento de dados',
     verification: [
-      'Fluxos repetitivos transformados em rotina tecnica',
+      'Fluxos repetitivos convertidos em rotina tecnica',
       'Integracoes desenhadas para reduzir retrabalho',
-      'Foco em previsibilidade e controle operacional',
+      'Estrutura voltada a previsibilidade e controle operacional',
     ],
     stack: ['Python', 'SQL', 'ETL', 'Integracoes', 'APIs', 'Automacao'],
     mock: {

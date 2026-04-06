@@ -20,10 +20,8 @@ function ProjectsSection({
     <section className="projects-section" id="projects">
       <div className="section-heading">
         <p className="eyebrow">Projetos</p>
-        <h2>Cases com leitura premium e foco no problema resolvido.</h2>
-        <p>
-          Selecione um case para ver contexto, solucao aplicada e os pontos que sustentam a entrega.
-        </p>
+        <h2>Projetos apresentados com contexto, solucao aplicada e resultado de forma objetiva.</h2>
+        <p>Selecione um projeto para entender rapidamente o desafio, a estrutura da entrega e o valor gerado.</p>
       </div>
 
       <div className="filter-bar" role="tablist" aria-label="Filtrar projetos">
@@ -81,6 +79,7 @@ function ProjectsSection({
             </div>
 
             <h3>{activeProject.title}</h3>
+            <p className="project-preview-role">{activeProject.role}</p>
             <p className="preview-text">{activeProject.summary}</p>
 
             <div className="project-status-row">
@@ -90,7 +89,7 @@ function ProjectsSection({
 
             <div className={`project-preview-visual is-${activeProject.mock.accent}`}>
               <div className="project-preview-visual-top">
-                <span>{activeProject.mock.eyebrow}</span>
+                <span>Visao do projeto</span>
                 <span>{activeProject.mock.title}</span>
               </div>
               <div className="project-preview-metrics">
@@ -110,17 +109,17 @@ function ProjectsSection({
 
             <div className="project-facts-grid">
               <div className="project-preview-block project-fact-card">
-                <span className="project-block-label">Problema</span>
+                <span className="project-block-label">O que precisava ser resolvido</span>
                 <p>{activeProject.problem}</p>
               </div>
 
               <div className="project-preview-block project-fact-card">
-                <span className="project-block-label">Resultado</span>
+                <span className="project-block-label">O que foi entregue</span>
                 <p>{activeProject.result}</p>
               </div>
 
               <div className="project-preview-block project-fact-card project-fact-card-wide">
-                <span className="project-block-label">Impacto</span>
+                <span className="project-block-label">Resultado na pratica</span>
                 <p>{activeProject.impact}</p>
               </div>
             </div>
@@ -180,20 +179,22 @@ function ProjectsSection({
                     <span className="project-number">{project.number}</span>
                     <span className="project-badge">{project.badge}</span>
                   </div>
-                  <div className={`project-card-strip is-${project.mock.accent}`} aria-hidden="true">
-                    <span />
-                  </div>
                   <strong>{project.title}</strong>
                   <span className="project-role">{project.role}</span>
-                  <p>{project.summary}</p>
+                  <p className="project-card-summary">{project.summary}</p>
+                  <div className="project-card-highlights">
+                    <span>{project.category}</span>
+                    <span>{project.year}</span>
+                    <span>{project.status}</span>
+                  </div>
                   <ul className="project-card-stack" aria-label={`Principais stacks de ${project.title}`}>
                     {project.stack.slice(0, 4).map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
                   <div className="project-card-footer">
-                    <span>{project.category}</span>
-                    <span>{project.year}</span>
+                    <span>Escopo</span>
+                    <span>{project.scope}</span>
                   </div>
                 </button>
               );

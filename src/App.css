@@ -619,6 +619,15 @@
   font-size: 2.6rem;
 }
 
+.project-preview-role {
+  margin-top: 6px;
+  color: var(--text-main);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .project-status-row,
 .project-preview-metrics {
   display: flex;
@@ -905,34 +914,6 @@
   line-height: 0.98;
 }
 
-.project-card-strip {
-  position: relative;
-  height: 12px;
-  border-radius: 999px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.project-card-strip span {
-  display: block;
-  width: 44%;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), currentColor);
-}
-
-.project-card-strip.is-commerce {
-  color: #52f06c;
-}
-
-.project-card-strip.is-desktop {
-  color: #63cfff;
-}
-
-.project-card-strip.is-systems {
-  color: #ffb44e;
-}
-
 .project-card-stack {
   display: flex;
   flex-wrap: wrap;
@@ -961,16 +942,47 @@
   font-size: 0.96rem;
 }
 
-.project-card p {
+.project-card-summary {
   font-size: 0.95rem;
   margin: 0;
 }
 
-.project-card-footer {
+.project-card-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-card-highlights span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text-secondary);
-  font-size: 0.84rem;
-  text-transform: uppercase;
+  font-size: 0.76rem;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-card-footer {
+  display: grid;
+  gap: 4px;
+  font-size: 0.84rem;
+}
+
+.project-card-footer span:first-child {
+  color: var(--accent);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-card-footer span:last-child {
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 .project-empty-state {
