@@ -12,6 +12,36 @@ export const aboutPoints = [
   'Perfil orientado a organizacao, evolucao continua e solucao objetiva de problemas para produto, operacao e negocio.',
 ];
 
+export const coreAreas = [
+  'Desenvolvimento web',
+  'Automacao',
+  'APIs',
+  'Banco de dados',
+  'Integracoes',
+  'IA para produtividade',
+];
+
+export const workExperience = [
+  {
+    id: 'web-solutions',
+    period: 'Projetos web',
+    title: 'Interfaces, modulos e fluxos de produto',
+    text: 'Desenvolvimento de interfaces, areas administrativas, autenticacao, formularios e jornadas com foco em clareza e uso real.',
+  },
+  {
+    id: 'systems-maintenance',
+    period: 'Sustentacao',
+    title: 'Manutencao e evolucao de sistemas',
+    text: 'Leitura de base existente, correcoes pontuais, ajustes em regras de negocio e melhoria progressiva sem perder estabilidade.',
+  },
+  {
+    id: 'automation-data',
+    period: 'Operacao',
+    title: 'Automacao, dados e integracoes',
+    text: 'Rotinas para reduzir tarefas manuais, integrar fontes de dados e dar mais previsibilidade a processos internos.',
+  },
+];
+
 export const stackGroups = [
   {
     title: 'Front-end',

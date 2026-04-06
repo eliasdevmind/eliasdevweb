@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 function ProjectsSection({
   categories,
   activeCategory,
@@ -12,6 +14,12 @@ function ProjectsSection({
   onPreviewLeave,
   previewPosition,
 }) {
+  const [activeDetailTab, setActiveDetailTab] = useState('overview');
+
+  useEffect(() => {
+    setActiveDetailTab('overview');
+  }, [activeProject?.id]);
+
   if (!activeProject) {
     return null;
   }
@@ -80,81 +88,117 @@ function ProjectsSection({
 
             <h3>{activeProject.title}</h3>
             <p className="project-preview-role">{activeProject.role}</p>
-            <p className="preview-text">{activeProject.summary}</p>
 
             <div className="project-status-row">
               <span className="project-status-pill">{activeProject.status}</span>
               <span className="project-scope">{activeProject.scope}</span>
             </div>
 
-            <div className={`project-preview-visual is-${activeProject.mock.accent}`}>
-              <div className="project-preview-visual-top">
-                <span>Visao do projeto</span>
-                <span>{activeProject.mock.title}</span>
-              </div>
-              <div className="project-preview-metrics">
-                {activeProject.mock.metrics.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </div>
-              <div className="project-preview-visual-grid">
-                {activeProject.mock.panels.map((panel) => (
-                  <div className="project-preview-panel" key={panel.label}>
-                    <span>{panel.label}</span>
-                    <strong>{panel.value}</strong>
+            <div className="tab-bar project-detail-tabs" role="tablist" aria-label="Detalhes do projeto">
+              <button
+                className={`tab-pill${activeDetailTab === 'overview' ? ' is-active' : ''}`}
+                type="button"
+                role="tab"
+                aria-selected={activeDetailTab === 'overview'}
+                onClick={() => setActiveDetailTab('overview')}
+              >
+                Visao geral
+              </button>
+              <button
+                className={`tab-pill${activeDetailTab === 'execution' ? ' is-active' : ''}`}
+                type="button"
+                role="tab"
+                aria-selected={activeDetailTab === 'execution'}
+                onClick={() => setActiveDetailTab('execution')}
+              >
+                Execucao
+              </button>
+              <button
+                className={`tab-pill${activeDetailTab === 'validation' ? ' is-active' : ''}`}
+                type="button"
+                role="tab"
+                aria-selected={activeDetailTab === 'validation'}
+                onClick={() => setActiveDetailTab('validation')}
+              >
+                Validacao
+              </button>
+            </div>
+
+            {activeDetailTab === 'overview' ? (
+              <div className="project-detail-panel">
+                <p className="preview-text">{activeProject.summary}</p>
+                <div className={`project-preview-visual is-${activeProject.mock.accent}`}>
+                  <div className="project-preview-visual-top">
+                    <span>Visao do projeto</span>
+                    <span>{activeProject.mock.title}</span>
                   </div>
-                ))}
+                  <div className="project-preview-metrics">
+                    {activeProject.mock.metrics.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
+                  </div>
+                  <div className="project-preview-visual-grid">
+                    {activeProject.mock.panels.map((panel) => (
+                      <div className="project-preview-panel" key={panel.label}>
+                        <span>{panel.label}</span>
+                        <strong>{panel.value}</strong>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
+            ) : null}
 
-            <div className="project-facts-grid">
-              <div className="project-preview-block project-fact-card">
-                <span className="project-block-label">O que precisava ser resolvido</span>
-                <p>{activeProject.problem}</p>
+            {activeDetailTab === 'execution' ? (
+              <div className="project-detail-panel">
+                <div className="project-facts-grid">
+                  <div className="project-preview-block project-fact-card">
+                    <span className="project-block-label">O que precisava ser resolvido</span>
+                    <p>{activeProject.problem}</p>
+                  </div>
+
+                  <div className="project-preview-block project-fact-card">
+                    <span className="project-block-label">O que foi entregue</span>
+                    <p>{activeProject.result}</p>
+                  </div>
+
+                  <div className="project-preview-block project-fact-card project-fact-card-wide">
+                    <span className="project-block-label">Resultado na pratica</span>
+                    <p>{activeProject.impact}</p>
+                  </div>
+                </div>
               </div>
+            ) : null}
 
-              <div className="project-preview-block project-fact-card">
-                <span className="project-block-label">O que foi entregue</span>
-                <p>{activeProject.result}</p>
-              </div>
+            {activeDetailTab === 'validation' ? (
+              <div className="project-detail-panel">
+                <div className="project-preview-block project-verification-block">
+                  <span className="project-block-label">Verificacao do case</span>
+                  <ul className="project-verification-list">
+                    {activeProject.verification.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
 
-              <div className="project-preview-block project-fact-card project-fact-card-wide">
-                <span className="project-block-label">Resultado na pratica</span>
-                <p>{activeProject.impact}</p>
-              </div>
-            </div>
+                <ul className="stack-cloud" aria-label={`Stack de ${activeProject.title}`}>
+                  {activeProject.stack.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
 
-            <div className="project-preview-block project-verification-block">
-              <span className="project-block-label">Verificacao do case</span>
-              <ul className="project-verification-list">
-                {activeProject.verification.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-
-            <ul className="stack-cloud" aria-label={`Stack de ${activeProject.title}`}>
-              {activeProject.stack.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-
-            {activeProject.links.length > 0 ? (
-              <div className="project-links">
-                {activeProject.links.map((link) => (
-                  <a
-                    key={link.label}
-                    className={`project-link project-link-${link.kind}${link.kind === 'live' ? ' is-live' : ''}`}
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="project-link-icon" aria-hidden="true">
-                      {link.kind === 'live' ? '▲' : '◆'}
-                    </span>
-                    <span>{link.label}</span>
-                  </a>
-                ))}
+                {activeProject.links.length > 0 ? (
+                  <div className="project-links">
+                    {activeProject.links.map((link) => (
+                      <a key={link.label} className="project-link" href={link.href} target="_blank" rel="noreferrer">
+                        <span className="project-link-icon" aria-hidden="true">
+                          {link.kind === 'live' ? '↗' : '↗'}
+                        </span>
+                        <span>{link.label}</span>
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             ) : null}
           </div>
@@ -180,21 +224,15 @@ function ProjectsSection({
                     <span className="project-badge">{project.badge}</span>
                   </div>
                   <strong>{project.title}</strong>
-                  <span className="project-role">{project.role}</span>
                   <p className="project-card-summary">{project.summary}</p>
-                  <div className="project-card-highlights">
-                    <span>{project.category}</span>
-                    <span>{project.year}</span>
-                    <span>{project.status}</span>
-                  </div>
                   <ul className="project-card-stack" aria-label={`Principais stacks de ${project.title}`}>
-                    {project.stack.slice(0, 4).map((item) => (
+                    {project.stack.slice(0, 3).map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
                   <div className="project-card-footer">
-                    <span>Escopo</span>
-                    <span>{project.scope}</span>
+                    <span>{project.category}</span>
+                    <span>{project.year}</span>
                   </div>
                 </button>
               );

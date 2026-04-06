@@ -11,11 +11,13 @@ import SystemsSection from './components/SystemsSection';
 import {
   aboutPoints,
   categories,
+  coreAreas,
   differentials,
   heroMetrics,
   projects,
   stackGroups,
   stackItems,
+  workExperience,
 } from './data/portfolioData';
 
 function App() {
@@ -96,7 +98,11 @@ function App() {
 
       <main className="page">
         <HeroSection heroMetrics={heroMetrics} />
-        <AboutSection aboutPoints={aboutPoints} />
+        <AboutSection
+          aboutPoints={aboutPoints}
+          coreAreas={coreAreas}
+          workExperience={workExperience}
+        />
         <StackSection stackGroups={stackGroups} />
         <ProjectsSection
           categories={categories}
