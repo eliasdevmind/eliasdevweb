@@ -1,15 +1,20 @@
 import { useEffect, useMemo, useState } from 'react';
 import './App.css';
+import AboutSection from './components/AboutSection';
 import BootSequence from './components/BootSequence';
 import ContactSection from './components/ContactSection';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import ProjectsSection from './components/ProjectsSection';
+import StackSection from './components/StackSection';
 import SystemsSection from './components/SystemsSection';
 import {
-  capabilities,
+  aboutPoints,
   categories,
+  differentials,
+  heroMetrics,
   projects,
+  stackGroups,
   stackItems,
 } from './data/portfolioData';
 
@@ -39,7 +44,7 @@ function App() {
   useEffect(() => {
     const timer = window.setTimeout(() => {
       setIsBooting(false);
-    }, 1800);
+    }, 1600);
 
     return () => window.clearTimeout(timer);
   }, []);
@@ -59,13 +64,15 @@ function App() {
     <div className={`portfolio-shell${isBooting ? ' is-booting' : ''}`}>
       <div className="ambient ambient-grid" aria-hidden="true" />
       <div className="ambient ambient-noise" aria-hidden="true" />
-      <div className="ambient ambient-glow" aria-hidden="true" />
+      <div className="ambient ambient-hud" aria-hidden="true" />
 
       <BootSequence isBooting={isBooting} onSkip={() => setIsBooting(false)} />
       <Header />
 
       <main className="page">
-        <HeroSection />
+        <HeroSection heroMetrics={heroMetrics} />
+        <AboutSection aboutPoints={aboutPoints} />
+        <StackSection stackGroups={stackGroups} />
         <ProjectsSection
           categories={categories}
           activeCategory={activeCategory}
@@ -77,7 +84,7 @@ function App() {
           onPreviewLeave={() => setPreviewPosition({ x: '50%', y: '50%' })}
           previewPosition={previewPosition}
         />
-        <SystemsSection capabilities={capabilities} stackItems={stackItems} />
+        <SystemsSection differentials={differentials} stackItems={stackItems} />
         <ContactSection />
       </main>
     </div>

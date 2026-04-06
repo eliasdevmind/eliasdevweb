@@ -2,31 +2,44 @@ function ContactSection() {
   return (
     <section className="contact-section" id="contact">
       <div className="contact-copy">
-        <p className="eyebrow">Contact</p>
-        <h2>Contato</h2>
+        <p className="eyebrow">Contato</p>
+        <h2>Projetos, melhorias de produto e solucoes web com mais identidade.</h2>
         <p className="contact-text">
-          Projetos, melhorias de produto, sistemas internos e automacoes.
+          Se voce procura alguem para desenvolver, ajustar, integrar ou
+          automatizar com visual forte e execucao organizada, este portfolio foi
+          feito para abrir essa conversa.
         </p>
       </div>
 
-      <div className="contact-shell">
-        <div className="contact-meta">
-          <a
-            className="contact-link"
-            href="https://github.com/eliasdevmind"
-            target="_blank"
-            rel="noreferrer"
-          >
-            github.com/eliasdevmind
-          </a>
-          <a
-            className="contact-link secondary"
-            href="https://www.linkedin.com/in/eliasdevmind"
-            target="_blank"
-            rel="noreferrer"
-          >
-            linkedin.com/in/eliasdevmind
-          </a>
+      <div className="contact-grid">
+        <a
+          className="surface-card contact-card"
+          href="https://github.com/eliasdevmind"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="panel-label">GitHub</span>
+          <strong>github.com/eliasdevmind</strong>
+        </a>
+
+        <a
+          className="surface-card contact-card"
+          href="https://www.linkedin.com/in/eliasdevmind"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="panel-label">LinkedIn</span>
+          <strong>linkedin.com/in/eliasdevmind</strong>
+        </a>
+
+        <div className="surface-card contact-card">
+          <span className="panel-label">Email</span>
+          <strong>Disponivel sob contato direto via LinkedIn</strong>
+        </div>
+
+        <div className="surface-card contact-card">
+          <span className="panel-label">Curriculo</span>
+          <strong>Disponivel para envio mediante solicitacao</strong>
         </div>
       </div>
     </section>
