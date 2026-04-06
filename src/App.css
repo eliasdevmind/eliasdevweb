@@ -94,19 +94,18 @@
   grid-template-columns: auto 1fr auto;
   gap: 18px;
   align-items: center;
-  padding: 18px 0;
+  padding: 16px 20px;
+  margin-top: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  background: rgba(13, 17, 23, 0.86);
   backdrop-filter: blur(18px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
   z-index: 30;
 }
 
 .topbar::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+  display: none;
 }
 
 .brandmark,
@@ -121,18 +120,28 @@
 .brandmark {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   color: var(--text-main);
   font-family: 'Rajdhani', sans-serif;
-  font-size: 1.12rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .brandmark-accent {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: rgba(57, 211, 83, 0.1);
   color: var(--accent);
-  text-shadow: 0 0 16px rgba(57, 211, 83, 0.22);
+}
+
+.brandmark-name {
+  color: var(--text-main);
 }
 
 .topnav {
@@ -145,12 +154,11 @@
 .topnav a {
   color: var(--text-secondary);
   font-size: 0.94rem;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .topnav a:hover {
   color: var(--text-main);
-  text-shadow: 0 0 18px rgba(57, 211, 83, 0.18);
 }
 
 .status-chip,
@@ -173,6 +181,8 @@
 .status-chip {
   color: var(--text-main);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.015);
+  min-height: 36px;
+  font-size: 0.84rem;
 }
 
 .status-led {
@@ -201,9 +211,32 @@
 .hero-section {
   display: grid;
   grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
-  gap: 28px;
+  gap: 24px;
   align-items: center;
   min-height: calc(100vh - 112px);
+}
+
+.hero-intro-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero-intro-line .eyebrow {
+  margin: 0;
+}
+
+.hero-intro-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  font-size: 0.84rem;
 }
 
 .eyebrow,
@@ -233,16 +266,17 @@
 
 .hero-copy h1 {
   margin-top: 16px;
-  font-size: clamp(3.8rem, 8vw, 6.6rem);
-  line-height: 0.9;
+  max-width: 10.5ch;
+  font-size: clamp(3.3rem, 7vw, 5.8rem);
+  line-height: 0.94;
 }
 
 .hero-role {
-  max-width: 18ch;
+  max-width: 26ch;
   margin-top: 16px;
   color: var(--text-main);
-  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
-  line-height: 1.18;
+  font-size: clamp(1.12rem, 2.2vw, 1.45rem);
+  line-height: 1.32;
 }
 
 .hero-text,
@@ -261,7 +295,7 @@
 }
 
 .hero-text {
-  max-width: 54ch;
+  max-width: 58ch;
   margin-top: 16px;
 }
 
@@ -363,102 +397,9 @@
   gap: 18px;
 }
 
-.hero-portrait-shell {
-  position: relative;
-  padding-bottom: 28px;
-}
-
-.hero-portrait-frame {
-  position: relative;
-  min-height: 660px;
-  border: 1px solid var(--line-strong);
-  border-radius: 36px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
-    linear-gradient(140deg, rgba(57, 211, 83, 0.08), transparent 40%, rgba(0, 0, 0, 0.18) 100%);
-  box-shadow: var(--shadow), var(--glow);
-  overflow: hidden;
-}
-
-.hero-portrait-frame::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 36px 36px;
-  opacity: 0.24;
-  mix-blend-mode: screen;
-  pointer-events: none;
-}
-
-.hero-portrait {
-  width: 100%;
-  height: 100%;
-  min-height: 660px;
-  object-fit: cover;
-  object-position: center top;
-  filter: saturate(0.96) contrast(1.02);
-}
-
-.portrait-corner {
-  position: absolute;
-  width: 38px;
-  height: 38px;
-  border-color: var(--accent-strong);
-  border-style: solid;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.portrait-corner-tl {
-  top: 18px;
-  left: 18px;
-  border-width: 2px 0 0 2px;
-}
-
-.portrait-corner-tr {
-  top: 18px;
-  right: 18px;
-  border-width: 2px 2px 0 0;
-}
-
-.portrait-corner-bl {
-  bottom: 18px;
-  left: 18px;
-  border-width: 0 0 2px 2px;
-}
-
-.portrait-corner-br {
-  right: 18px;
-  bottom: 18px;
-  border-width: 0 2px 2px 0;
-}
-
-.portrait-overlay-card {
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 0;
-  z-index: 3;
-  padding: 20px 22px;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: rgba(11, 15, 10, 0.92);
-  backdrop-filter: blur(12px);
-  box-shadow: var(--shadow);
-}
-
-.portrait-overlay-card ul {
-  display: grid;
-  gap: 8px;
-  margin-top: 12px;
-  padding-left: 18px;
-  color: var(--text-secondary);
-}
-
 .hero-terminal-card,
+.hero-summary-card,
+.hero-proof-card,
 .about-card,
 .about-sidecard,
 .stack-card,
@@ -473,6 +414,65 @@
 .hero-terminal-card {
   display: grid;
   gap: 14px;
+}
+
+.hero-summary-card,
+.hero-proof-card {
+  display: grid;
+  gap: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    rgba(13, 17, 23, 0.92);
+}
+
+.hero-summary-card strong,
+.hero-proof-list strong {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.hero-summary-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-summary-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-main);
+  font-size: 0.82rem;
+}
+
+.hero-proof-list {
+  display: grid;
+  gap: 14px;
+}
+
+.hero-proof-list div {
+  display: grid;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero-proof-list div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.hero-proof-list span {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .terminal-lines {

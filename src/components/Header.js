@@ -2,7 +2,8 @@ function Header() {
   return (
     <header className="topbar">
       <a className="brandmark" href="#home">
-        <span className="brandmark-accent">Elias</span> Araujo
+        <span className="brandmark-accent">EA</span>
+        <span className="brandmark-name">Elias Araujo</span>
       </a>
 
       <nav className="topnav" aria-label="Navegacao principal">
@@ -15,7 +16,7 @@ function Header() {
 
       <div className="status-chip">
         <span className="status-led" />
-        <span>Disponivel para novos projetos</span>
+        <span>Disponivel para projetos</span>
       </div>
     </header>
   );

@@ -2,15 +2,18 @@ function HeroSection({ heroMetrics }) {
   return (
     <section className="hero-section" id="home">
       <div className="hero-copy">
-        <p className="eyebrow">Desenvolvedor / TI / Automacao / Solucoes Web</p>
-        <h1>Elias Araujo</h1>
+        <div className="hero-intro-line">
+          <p className="eyebrow">Desenvolvedor focado em sistemas, APIs e automacao</p>
+          <span className="hero-intro-chip">Disponivel para freelas e oportunidades</span>
+        </div>
+        <h1>Construo solucoes web com clareza tecnica e foco em entrega.</h1>
         <p className="hero-role">
-          Construo interfaces, sistemas e automacoes com visual forte, estrutura
-          limpa e foco em resultado real.
+          Atuo com desenvolvimento web, manutencao de sistemas, banco de dados,
+          integracoes e automacao de processos.
         </p>
         <p className="hero-text">
-          Portfólio com identidade dark, leitura premium e direcao inspirada em
-          terminal, estrategia e execucao disciplinada.
+          Portfolio organizado para mostrar projetos, experiencia pratica e a
+          forma como transformo necessidade operacional em solucao funcional.
         </p>
 
         <div className="hero-actions">
@@ -33,36 +36,36 @@ function HeroSection({ heroMetrics }) {
       </div>
 
       <div className="hero-visual">
-        <div className="hero-portrait-shell">
-          <div className="hero-portrait-frame">
-            <span className="portrait-corner portrait-corner-tl" aria-hidden="true" />
-            <span className="portrait-corner portrait-corner-tr" aria-hidden="true" />
-            <span className="portrait-corner portrait-corner-bl" aria-hidden="true" />
-            <span className="portrait-corner portrait-corner-br" aria-hidden="true" />
-            <img
-              className="hero-portrait"
-              src="/profile-photo.png"
-              alt="Foto de perfil de Elias Araujo"
-            />
-          </div>
-
-          <div className="portrait-overlay-card">
-            <span className="panel-label">Mindset</span>
-            <ul>
-              <li>Execucao orientada a produto</li>
-              <li>Organizacao, disciplina e clareza</li>
-              <li>Automacao para ganhar escala</li>
-            </ul>
+        <div className="surface-card hero-summary-card">
+          <span className="panel-label">Resumo profissional</span>
+          <strong>Desenvolvimento com base em produto, dados e operacao.</strong>
+          <p>
+            Experiencia com PHP, Python, SQL, APIs, ETL, manutencao de sistemas
+            e automacao de rotinas para ganhar previsibilidade e escala.
+          </p>
+          <div className="hero-summary-list">
+            <span>Desenvolvimento web</span>
+            <span>APIs e integracoes</span>
+            <span>Banco de dados</span>
+            <span>Automacao com Python</span>
           </div>
         </div>
 
-        <div className="hero-terminal-card">
-          <span className="panel-label">Terminal feed</span>
-          <div className="terminal-lines" aria-label="Resumo tecnico">
-            <span>{'>'} stack = [JavaScript, TypeScript, React, Node.js, Python, SQL]</span>
-            <span>{'>'} foco = interfaces, APIs, automacao, integracoes</span>
-            <span>{'>'} estrategia = clareza + consistencia + resultado</span>
-            <span>{'>'} status = build(produto).ship()</span>
+        <div className="surface-card hero-proof-card">
+          <span className="panel-label">Leitura rapida</span>
+          <div className="hero-proof-list" aria-label="Resumo tecnico">
+            <div>
+              <span>Experiencia pratica</span>
+              <strong>Modulos, APIs, SQL, ETL e manutencao de sistemas</strong>
+            </div>
+            <div>
+              <span>Foco atual</span>
+              <strong>Projetos web, automacao e integracao entre sistemas</strong>
+            </div>
+            <div>
+              <span>Estilo de entrega</span>
+              <strong>Clareza, organizacao tecnica e resultado funcional</strong>
+            </div>
           </div>
         </div>
       </div>
