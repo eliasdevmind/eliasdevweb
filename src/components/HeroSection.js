@@ -3,17 +3,18 @@ function HeroSection({ heroMetrics }) {
     <section className="hero-section" id="home">
       <div className="hero-copy">
         <div className="hero-intro-line">
-          <p className="eyebrow">Desenvolvedor focado em sistemas, APIs e automacao</p>
-          <span className="hero-intro-chip">Disponivel para freelas e oportunidades</span>
+          <p className="eyebrow">Desenvolvimento web, sistemas, banco de dados e automacao</p>
+          <span className="hero-intro-chip">Disponivel para projetos e oportunidades</span>
         </div>
-        <h1>Construo solucoes web com clareza tecnica e foco em entrega.</h1>
+        <h1>Desenvolvimento de solucoes web com clareza tecnica e foco em resultado.</h1>
         <p className="hero-role">
-          Atuo com desenvolvimento web, manutencao de sistemas, banco de dados,
+          Atuacao em desenvolvimento web, manutencao de sistemas, banco de dados,
           integracoes e automacao de processos.
         </p>
         <p className="hero-text">
-          Portfolio organizado para mostrar projetos, experiencia pratica e a
-          forma como transformo necessidade operacional em solucao funcional.
+          Portfolio profissional voltado a apresentar experiencia pratica,
+          projetos desenvolvidos e a capacidade de transformar demandas reais em
+          solucoes funcionais e bem estruturadas.
         </p>
 
         <div className="hero-actions">
@@ -51,19 +52,19 @@ function HeroSection({ heroMetrics }) {
         </div>
 
         <div className="surface-card hero-proof-card">
-          <span className="panel-label">Leitura rapida</span>
+          <span className="panel-label">Resumo profissional</span>
           <div className="hero-proof-list" aria-label="Resumo tecnico">
             <div>
-              <span>Experiencia pratica</span>
-              <strong>Modulos, APIs, SQL, ETL e manutencao de sistemas</strong>
+              <span>Experiencia tecnica</span>
+              <strong>Desenvolvimento de modulos, APIs, SQL, ETL e manutencao de sistemas</strong>
             </div>
             <div>
-              <span>Foco atual</span>
-              <strong>Projetos web, automacao e integracao entre sistemas</strong>
+              <span>Areas de atuacao</span>
+              <strong>Projetos web, automacao de processos e integracao entre sistemas</strong>
             </div>
             <div>
-              <span>Estilo de entrega</span>
-              <strong>Clareza, organizacao tecnica e resultado funcional</strong>
+              <span>Direcao de trabalho</span>
+              <strong>Organizacao tecnica, clareza estrutural e entrega funcional</strong>
             </div>
           </div>
         </div>

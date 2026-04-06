@@ -7,7 +7,7 @@ function AboutSection({ aboutPoints, coreAreas, workExperience }) {
     <section className="about-section" id="about">
       <div className="section-heading narrow">
         <p className="eyebrow">Sobre mim</p>
-        <h2>Perfil, experiencia de trabalho e forma de atuacao em uma leitura mais organizada.</h2>
+        <h2>Perfil profissional, experiencia e forma de atuacao apresentados de maneira clara e objetiva.</h2>
       </div>
 
       <div className="tab-bar about-tab-bar" role="tablist" aria-label="Informacoes sobre Elias">

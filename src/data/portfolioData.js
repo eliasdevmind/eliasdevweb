@@ -7,9 +7,10 @@ export const heroMetrics = [
 ];
 
 export const aboutPoints = [
-  'Atuacao voltada a desenvolvimento web, manutencao de sistemas e criacao de solucoes com foco em estrutura clara, uso real e evolucao continua.',
-  'Experiencia pratica com PHP, Python, SQL, APIs, ETL e integracoes, incluindo manutencao de sistemas legados, criacao de modulos e automacao de processos.',
-  'Perfil orientado a resolver problemas de negocio com organizacao tecnica, leitura de contexto e entregas que melhoram fluxo, dados e operacao.',
+  'Profissional com atuacao voltada a desenvolvimento web, manutencao de sistemas e construcao de solucoes com foco em clareza tecnica, usabilidade e evolucao continua.',
+  'Possui experiencia pratica com PHP, Python, SQL, APIs, ETL e integracoes, incluindo criacao de modulos, manutencao de sistemas legados e automacao de processos.',
+  'Na atuacao como assistente de TI, desenvolveu rotina consistente em banco de dados, consultas SQL, relatorios em Excel e Power BI e apoio a operacao por meio de automacoes e leitura de indicadores.',
+  'Tambem realiza trabalhos como freelancer de programacao, entregando projetos sob demanda com foco em organizacao, estabilidade e resultado funcional.',
 ];
 
 export const coreAreas = [
@@ -26,19 +27,25 @@ export const workExperience = [
     id: 'instituto-azimuth',
     period: 'Instituto Azimuth',
     title: 'Estagio em desenvolvimento',
-    text: 'Atuacao com criacao de modulos, manutencao de sistemas legados em PHP, desenvolvimento de APIs, scripts SQL, ETL e integracoes com sistemas externos.',
+    text: 'Atuacao em desenvolvimento com criacao de modulos, manutencao de sistemas legados em PHP, desenvolvimento de APIs, scripts SQL, processos de ETL e integracoes com sistemas externos.',
   },
   {
-    id: 'dados-erp',
-    period: 'ERP e dados',
-    title: 'Relatorios, integracoes e automacao',
-    text: 'Construcao de consultas SQL, relatorios em Excel e Power BI, tratamento de dados e automacao de processos com Python e n8n.',
+    id: 'assistente-ti',
+    period: 'Assistente de TI',
+    title: 'Banco de dados, relatorios e automacao de processos',
+    text: 'Atuacao com ERP, consultas SQL, controle e leitura de dados, elaboracao de relatorios em Excel e Power BI e automacoes voltadas ao suporte da rotina operacional e acompanhamento de indicadores.',
+  },
+  {
+    id: 'freelancer-dev',
+    period: 'Freelancer',
+    title: 'Projetos de programacao e solucoes sob demanda',
+    text: 'Desenvolvimento de projetos web, APIs, automacoes e ajustes em sistemas com foco em atender demandas reais de produto, operacao e negocio com clareza e objetividade.',
   },
   {
     id: 'backend-structure',
-    period: 'Foco tecnico',
-    title: 'Desenvolvimento com base em back-end e sistemas',
-    text: 'Base em logica de negocio, APIs, banco de dados, integracoes e evolucao de sistemas com foco em estabilidade e valor pratico.',
+    period: 'Base tecnica',
+    title: 'Desenvolvimento com foco em sistemas e integracoes',
+    text: 'Base tecnica em logica de negocio, APIs, banco de dados, integracoes e evolucao de sistemas, com foco em estabilidade, clareza estrutural e valor pratico.',
   },
 ];
 
@@ -69,13 +76,13 @@ export const projects = [
     year: '2026',
     role: 'Full stack com checkout e painel administrativo',
     summary:
-      'Projeto de e-commerce com catalogo, autenticacao, painel administrativo e fluxo de checkout integrado.',
+      'Desenvolvimento de uma plataforma de e-commerce com catalogo, autenticacao, painel administrativo e fluxo de checkout integrado.',
     problem:
-      'A operacao precisava reunir catalogo, gestao de produtos e jornada de compra em um fluxo unico e consistente.',
+      'A operacao demandava a centralizacao do catalogo, da gestao de produtos e da jornada de compra em um fluxo unico e consistente.',
     result:
-      'Foi estruturada uma base full stack com navegacao de compra, autenticacao e organizacao administrativa do produto.',
+      'Foi estruturada uma base full stack com navegacao de compra, autenticacao e organizacao administrativa da operacao.',
     impact:
-      'O projeto consolida a operacao comercial em uma unica estrutura, facilitando manutencao, escala e clareza do fluxo.',
+      'A solucao consolida a operacao comercial em uma unica estrutura, favorecendo manutencao, escalabilidade e clareza de processo.',
     status: 'Estrutura validada',
     scope: 'Catalogo, autenticacao, checkout e area administrativa',
     verification: [
@@ -112,13 +119,13 @@ export const projects = [
     year: '2025',
     role: 'Aplicacao desktop com integracao de API',
     summary:
-      'Aplicacao desktop em PySide6 com listagem paginada, tela de detalhes e consumo organizado de API externa.',
+      'Desenvolvimento de aplicacao desktop em PySide6 com listagem paginada, tela de detalhes e consumo estruturado de API externa.',
     problem:
-      'O objetivo era construir uma experiencia local fluida para consulta de dados externos, sem travar a navegacao.',
+      'Havia a necessidade de oferecer uma experiencia local fluida para consulta de dados externos, sem comprometer a navegacao.',
     result:
-      'Foi entregue uma interface desktop clara, com carregamento estruturado e separacao entre listagem e detalhamento.',
+      'Foi entregue uma interface desktop com carregamento estruturado e separacao clara entre listagem e detalhamento.',
     impact:
-      'O resultado e uma aplicacao mais estavel para uso recorrente, com leitura simples e melhor experiencia de consulta.',
+      'O resultado e uma aplicacao mais estavel para uso recorrente, com melhor experiencia de consulta e leitura de informacoes.',
     status: 'Interface validada',
     scope: 'Interface desktop, consumo de API e fluxo de navegacao',
     verification: [
@@ -155,13 +162,13 @@ export const projects = [
     year: '2026',
     role: 'Automacao operacional com integracao de dados',
     summary:
-      'Conjunto de rotinas para reduzir tarefas manuais, integrar dados e dar mais previsibilidade a operacoes internas.',
+      'Desenvolvimento de rotinas para reduzir tarefas manuais, integrar dados e ampliar a previsibilidade de operacoes internas.',
     problem:
-      'A operacao dependia de execucao manual recorrente, com retrabalho e baixa previsibilidade entre etapas.',
+      'A operacao dependia de execucao manual recorrente, com retrabalho e baixa previsibilidade entre as etapas do processo.',
     result:
-      'Foram estruturadas automacoes e rotinas tecnicas para organizar fluxos, padronizar dados e reduzir dependencia manual.',
+      'Foram estruturadas automacoes e rotinas tecnicas para organizar fluxos, padronizar dados e reduzir a dependencia de execucao manual.',
     impact:
-      'O ganho principal esta na consistencia operacional, com menos repeticao manual e mais controle sobre os processos.',
+      'O principal ganho esta na consistencia operacional, com menos repeticao manual e maior controle sobre os processos.',
     status: 'Processo validado',
     scope: 'Automacao de rotinas, integracoes e tratamento de dados',
     verification: [

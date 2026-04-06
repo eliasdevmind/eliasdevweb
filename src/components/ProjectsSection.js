@@ -28,8 +28,8 @@ function ProjectsSection({
     <section className="projects-section" id="projects">
       <div className="section-heading">
         <p className="eyebrow">Projetos</p>
-        <h2>Projetos apresentados com contexto, solucao aplicada e resultado de forma objetiva.</h2>
-        <p>Selecione um projeto para entender rapidamente o desafio, a estrutura da entrega e o valor gerado.</p>
+        <h2>Projetos apresentados com contexto, solucao aplicada e resultado de forma clara.</h2>
+        <p>Selecione um projeto para visualizar o desafio, a solucao desenvolvida e os principais resultados da entrega.</p>
       </div>
 
       <div className="filter-bar" role="tablist" aria-label="Filtrar projetos">
@@ -166,17 +166,17 @@ function ProjectsSection({
               <div className="project-detail-panel">
                 <div className="project-facts-grid">
                   <div className="project-preview-block project-fact-card">
-                    <span className="project-block-label">O que precisava ser resolvido</span>
+                    <span className="project-block-label">Desafio identificado</span>
                     <p>{activeProject.problem}</p>
                   </div>
 
                   <div className="project-preview-block project-fact-card">
-                    <span className="project-block-label">O que foi entregue</span>
+                    <span className="project-block-label">Solucao desenvolvida</span>
                     <p>{activeProject.result}</p>
                   </div>
 
                   <div className="project-preview-block project-fact-card project-fact-card-wide">
-                    <span className="project-block-label">Resultado na pratica</span>
+                    <span className="project-block-label">Resultado obtido</span>
                     <p>{activeProject.impact}</p>
                   </div>
                 </div>
