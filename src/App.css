@@ -26,6 +26,7 @@
     radial-gradient(circle at 80% 16%, rgba(82, 240, 108, 0.08), transparent 20%),
     linear-gradient(180deg, var(--bg-main) 0%, var(--bg-secondary) 52%, #0a0e09 100%);
   overflow: hidden;
+  overflow-x: hidden;
   isolation: isolate;
 }
 
@@ -89,18 +90,18 @@
 
 .topbar {
   position: sticky;
-  top: 0;
+  top: 12px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 18px;
   align-items: center;
-  padding: 16px 20px;
-  margin-top: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 20px;
-  background: rgba(13, 17, 23, 0.86);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+  padding: 18px 22px;
+  margin: 12px auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  background: rgba(13, 17, 23, 0.9);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.32);
   z-index: 30;
 }
 
@@ -154,7 +155,15 @@
 .topnav a {
   color: var(--text-secondary);
   font-size: 0.94rem;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.topnav a:hover {
+  color: var(--text-main);
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .topnav a:hover {
@@ -210,10 +219,11 @@
 
 .hero-section {
   display: grid;
-  grid-template-columns: minmax(0, 1.14fr) minmax(320px, 0.86fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 28px;
   align-items: start;
-  min-height: calc(100vh - 112px);
+  min-height: calc(100vh - 120px);
+  padding-top: 22px;
 }
 
 .hero-intro-line {
@@ -340,7 +350,7 @@
 
 .hero-metrics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 14px;
   margin-top: 28px;
 }
@@ -645,6 +655,10 @@
   gap: 22px;
   margin-top: 26px;
   align-items: start;
+}
+
+.project-preview {
+  padding: 28px;
 }
 
 .filter-bar {
@@ -964,6 +978,10 @@
 }
 
 .project-card {
+  min-height: 260px;
+}
+
+.project-card {
   display: grid;
   gap: 12px;
   border-radius: 28px;
@@ -1062,6 +1080,26 @@
   gap: 18px;
 }
 
+.section-heading {
+  max-width: 880px;
+  display: grid;
+  gap: 14px;
+}
+
+.section-heading::after {
+  content: '';
+  width: 64px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(57, 211, 83, 0.35);
+}
+
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .system-card {
   display: grid;
   gap: 12px;
@@ -1088,6 +1126,10 @@
 }
 
 .contact-card {
+  min-height: 180px;
+}
+
+.contact-card {
   display: grid;
   gap: 14px;
   min-height: 160px;
@@ -1103,6 +1145,87 @@
   color: var(--text-main);
   font-size: 1.18rem;
   line-height: 1.45;
+}
+
+@media (max-width: 1080px) {
+  .page {
+    width: min(1040px, calc(100% - 32px));
+  }
+
+  .hero-section,
+  .about-layout,
+  .projects-layout,
+  .experience-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual,
+  .hero-metrics,
+  .stack-grid,
+  .project-cards,
+  .experience-list,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-portrait-frame {
+    min-height: 420px;
+  }
+
+  .project-preview {
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 18px 18px;
+  }
+
+  .topnav {
+    justify-content: center;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    max-width: 100%;
+  }
+
+  .hero-role,
+  .hero-text,
+  .section-heading p {
+    max-width: 100%;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-bar,
+  .filter-bar-secondary {
+    justify-content: center;
+  }
+
+  .preview-topline,
+  .project-card-topline,
+  .project-card-footer,
+  .project-status-row,
+  .project-preview-metrics {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-preview h3 {
+    font-size: 2.1rem;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
 }
 
 .boot-sequence {
