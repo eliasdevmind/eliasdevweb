@@ -1,6 +1,9 @@
 # Node modules
 node_modules/
 
+# Build de produção
+build/
+
 # Credenciais e ambiente
 .env
 
@@ -8,3 +11,5 @@ node_modules/
 *.log
 
 .vercel
+.codex
+.codex/
