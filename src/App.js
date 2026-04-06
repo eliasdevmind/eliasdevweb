@@ -20,6 +20,7 @@ import {
 
 function App() {
   const [activeCategory, setActiveCategory] = useState('Todos');
+  const [activeStack, setActiveStack] = useState('Todas');
   const [isBooting, setIsBooting] = useState(true);
   const [previewPosition, setPreviewPosition] = useState({
     x: '50%',
@@ -27,13 +28,37 @@ function App() {
   });
   const [activeProject, setActiveProject] = useState(projects[0]);
 
-  const filteredProjects = useMemo(() => {
+  const projectsByCategory = useMemo(() => {
     if (activeCategory === 'Todos') {
       return projects;
     }
 
     return projects.filter((project) => project.category === activeCategory);
   }, [activeCategory]);
+
+  const stackFilters = useMemo(() => {
+    const values = new Set();
+
+    projectsByCategory.forEach((project) => {
+      project.stack.forEach((item) => values.add(item));
+    });
+
+    return ['Todas', ...Array.from(values)];
+  }, [projectsByCategory]);
+
+  const filteredProjects = useMemo(() => {
+    if (activeStack === 'Todas') {
+      return projectsByCategory;
+    }
+
+    return projectsByCategory.filter((project) => project.stack.includes(activeStack));
+  }, [activeStack, projectsByCategory]);
+
+  useEffect(() => {
+    if (!stackFilters.includes(activeStack)) {
+      setActiveStack('Todas');
+    }
+  }, [activeStack, stackFilters]);
 
   useEffect(() => {
     if (!filteredProjects.some((project) => project.id === activeProject.id)) {
@@ -77,6 +102,9 @@ function App() {
           categories={categories}
           activeCategory={activeCategory}
           onCategoryChange={setActiveCategory}
+          stackFilters={stackFilters}
+          activeStack={activeStack}
+          onStackChange={setActiveStack}
           filteredProjects={filteredProjects}
           activeProject={activeProject}
           onProjectChange={setActiveProject}

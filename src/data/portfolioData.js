@@ -44,7 +44,27 @@ export const projects = [
       'Necessidade de centralizar jornada de compra, cadastro de produtos e operacao em um fluxo unico e confiavel.',
     result:
       'Case completo para demonstrar arquitetura full stack, integracao com pagamentos e organizacao de produto.',
+    impact:
+      'Organiza a operacao comercial em uma estrutura unica, com fluxo de compra, autenticacao e administracao integrados.',
+    status: 'Estrutura validada',
+    scope: 'Checkout, catalogo, autenticacao e painel',
+    verification: [
+      'Fluxo principal de compra mapeado',
+      'Arquitetura separada entre front, API e dados',
+      'Integracao de pagamento prevista no fluxo real',
+    ],
     stack: ['Vue.js', 'Node.js', 'MySQL', 'JWT', 'Express', 'Mercado Pago'],
+    mock: {
+      eyebrow: 'checkout + admin',
+      title: 'commerce-suite',
+      accent: 'commerce',
+      metrics: ['Catalogo', 'Auth', 'Pagamento'],
+      panels: [
+        { label: 'Vitrine', value: '12 colecoes' },
+        { label: 'Pedidos', value: 'tempo real' },
+        { label: 'Painel', value: 'estoque + upload' },
+      ],
+    },
     links: [
       {
         label: 'GitHub',
@@ -67,7 +87,27 @@ export const projects = [
       'Criar uma experiencia local responsiva com consumo de dados externos e fluxo claro de navegacao.',
     result:
       'Demonstra dominio em Python, interface grafica e integracao assíncrona para aplicacoes desktop.',
+    impact:
+      'Entrega navegacao clara, leitura de dados externos e experiencia local consistente para uso continuo.',
+    status: 'Interface validada',
+    scope: 'Desktop UI, API publica e navegacao',
+    verification: [
+      'Listagem e detalhamento de registros separados',
+      'Interface responsiva em ambiente desktop',
+      'Consumo de API com carregamento organizado',
+    ],
     stack: ['Python', 'PySide6', 'API REST', 'Requests', 'Threading', 'Qt'],
+    mock: {
+      eyebrow: 'desktop app',
+      title: 'api-browser',
+      accent: 'desktop',
+      metrics: ['Lista', 'Detalhe', 'Threads'],
+      panels: [
+        { label: 'Grid', value: 'paginado' },
+        { label: 'Painel', value: 'rich detail' },
+        { label: 'Carga', value: 'nao bloqueante' },
+      ],
+    },
     links: [
       {
         label: 'GitHub',
@@ -90,7 +130,27 @@ export const projects = [
       'Processos manuais, retrabalho e dependencia de execucao operacional constante.',
     result:
       'Automacoes e rotinas tecnicas que aumentam previsibilidade, organizacao e capacidade operacional.',
+    impact:
+      'Reduz dependencia de tarefas manuais e melhora consistencia em processos internos e tratamento de dados.',
+    status: 'Processo validado',
+    scope: 'Automacao, integracao e tratamento de dados',
+    verification: [
+      'Fluxos repetitivos transformados em rotina tecnica',
+      'Integracoes desenhadas para reduzir retrabalho',
+      'Foco em previsibilidade e controle operacional',
+    ],
     stack: ['Python', 'SQL', 'ETL', 'Integracoes', 'APIs', 'Automacao'],
+    mock: {
+      eyebrow: 'ops engine',
+      title: 'internal-flow',
+      accent: 'systems',
+      metrics: ['ETL', 'Integracoes', 'Alertas'],
+      panels: [
+        { label: 'Filas', value: 'job orchestration' },
+        { label: 'Dados', value: 'normalizacao' },
+        { label: 'Saida', value: 'controle operacional' },
+      ],
+    },
     links: [],
     badge: 'Operacao e dados',
   },
