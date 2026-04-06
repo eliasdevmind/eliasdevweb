@@ -884,6 +884,10 @@
   margin-top: 18px;
 }
 
+.project-links-always-visible {
+  margin-top: 16px;
+}
+
 .project-link {
   display: inline-flex;
   align-items: center;
@@ -935,7 +939,7 @@
   text-align: left;
   border-color: var(--line);
   cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   animation: cardReveal 0.45s ease both;
   animation-delay: calc(var(--stagger-order, 0) * 60ms);
 }
@@ -943,7 +947,10 @@
 .project-card.is-active {
   border-color: var(--line-strong);
   box-shadow: var(--shadow), var(--glow);
-  transform: translateY(-3px);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+    linear-gradient(135deg, rgba(57, 211, 83, 0.08), transparent 40%),
+    var(--surface);
 }
 
 .project-number {

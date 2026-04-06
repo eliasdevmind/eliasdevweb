@@ -7,9 +7,9 @@ export const heroMetrics = [
 ];
 
 export const aboutPoints = [
-  'Atuacao em desenvolvimento web, APIs, automacao e manutencao de sistemas com foco em estrutura limpa e uso real.',
-  'Experiencia com integracoes, banco de dados, rotinas operacionais e uso de IA para acelerar produtividade sem perder controle tecnico.',
-  'Perfil orientado a organizacao, evolucao continua e solucao objetiva de problemas para produto, operacao e negocio.',
+  'Atuacao voltada a desenvolvimento web, manutencao de sistemas e criacao de solucoes com foco em estrutura clara, uso real e evolucao continua.',
+  'Experiencia pratica com PHP, Python, SQL, APIs, ETL e integracoes, incluindo manutencao de sistemas legados, criacao de modulos e automacao de processos.',
+  'Perfil orientado a resolver problemas de negocio com organizacao tecnica, leitura de contexto e entregas que melhoram fluxo, dados e operacao.',
 ];
 
 export const coreAreas = [
@@ -18,27 +18,27 @@ export const coreAreas = [
   'APIs',
   'Banco de dados',
   'Integracoes',
-  'IA para produtividade',
+  'Manutencao de sistemas',
 ];
 
 export const workExperience = [
   {
-    id: 'web-solutions',
-    period: 'Projetos web',
-    title: 'Interfaces, modulos e fluxos de produto',
-    text: 'Desenvolvimento de interfaces, areas administrativas, autenticacao, formularios e jornadas com foco em clareza e uso real.',
+    id: 'instituto-azimuth',
+    period: 'Instituto Azimuth',
+    title: 'Estagio em desenvolvimento',
+    text: 'Atuacao com criacao de modulos, manutencao de sistemas legados em PHP, desenvolvimento de APIs, scripts SQL, ETL e integracoes com sistemas externos.',
   },
   {
-    id: 'systems-maintenance',
-    period: 'Sustentacao',
-    title: 'Manutencao e evolucao de sistemas',
-    text: 'Leitura de base existente, correcoes pontuais, ajustes em regras de negocio e melhoria progressiva sem perder estabilidade.',
+    id: 'dados-erp',
+    period: 'ERP e dados',
+    title: 'Relatorios, integracoes e automacao',
+    text: 'Construcao de consultas SQL, relatorios em Excel e Power BI, tratamento de dados e automacao de processos com Python e n8n.',
   },
   {
-    id: 'automation-data',
-    period: 'Operacao',
-    title: 'Automacao, dados e integracoes',
-    text: 'Rotinas para reduzir tarefas manuais, integrar fontes de dados e dar mais previsibilidade a processos internos.',
+    id: 'backend-structure',
+    period: 'Foco tecnico',
+    title: 'Desenvolvimento com base em back-end e sistemas',
+    text: 'Base em logica de negocio, APIs, banco de dados, integracoes e evolucao de sistemas com foco em estabilidade e valor pratico.',
   },
 ];
 

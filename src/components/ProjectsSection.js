@@ -94,6 +94,19 @@ function ProjectsSection({
               <span className="project-scope">{activeProject.scope}</span>
             </div>
 
+            {activeProject.links.length > 0 ? (
+              <div className="project-links project-links-always-visible">
+                {activeProject.links.map((link) => (
+                  <a key={link.label} className="project-link" href={link.href} target="_blank" rel="noreferrer">
+                    <span className="project-link-icon" aria-hidden="true">
+                      ↗
+                    </span>
+                    <span>{link.label}</span>
+                  </a>
+                ))}
+              </div>
+            ) : null}
+
             <div className="tab-bar project-detail-tabs" role="tablist" aria-label="Detalhes do projeto">
               <button
                 className={`tab-pill${activeDetailTab === 'overview' ? ' is-active' : ''}`}
@@ -186,19 +199,6 @@ function ProjectsSection({
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-
-                {activeProject.links.length > 0 ? (
-                  <div className="project-links">
-                    {activeProject.links.map((link) => (
-                      <a key={link.label} className="project-link" href={link.href} target="_blank" rel="noreferrer">
-                        <span className="project-link-icon" aria-hidden="true">
-                          {link.kind === 'live' ? '↗' : '↗'}
-                        </span>
-                        <span>{link.label}</span>
-                      </a>
-                    ))}
-                  </div>
-                ) : null}
               </div>
             ) : null}
           </div>
@@ -215,7 +215,6 @@ function ProjectsSection({
                   className={`surface-card project-card${isActive ? ' is-active' : ''}`}
                   type="button"
                   style={{ '--stagger-order': index }}
-                  onMouseEnter={() => onProjectChange(project)}
                   onFocus={() => onProjectChange(project)}
                   onClick={() => onProjectChange(project)}
                 >
