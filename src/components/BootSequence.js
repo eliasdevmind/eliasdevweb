@@ -3,7 +3,7 @@ function BootSequence({ isBooting, onSkip }) {
     <div className={`boot-sequence${isBooting ? ' is-active' : ''}`} aria-hidden={!isBooting}>
       <div className="boot-panel">
         <span className="boot-label">Portfolio system</span>
-        <strong>Inicializando interface estrategica...</strong>
+        <strong>Inicializando interface estratégica...</strong>
         <div className="boot-progress">
           <span className="boot-bar" />
         </div>

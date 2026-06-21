@@ -3,10 +3,10 @@ function ContactSection() {
     <section className="contact-section" id="contact">
       <div className="contact-copy">
         <p className="eyebrow">Contato</p>
-        <h2>Projetos, melhorias de produto e solucoes web com mais identidade.</h2>
+        <h2>Projetos, melhorias de produto e soluções web com mais identidade.</h2>
         <p className="contact-text">
-          Se voce procura alguem para desenvolver, ajustar, integrar ou
-          automatizar com visual forte e execucao organizada, este portfolio foi
+          Se você procura alguém para desenvolver, ajustar, integrar ou
+          automatizar com visual forte e execução organizada, este portfólio foi
           feito para abrir essa conversa.
         </p>
       </div>

@@ -6,7 +6,7 @@ function Header() {
         <span className="brandmark-name">Elias Araujo</span>
       </a>
 
-      <nav className="topnav" aria-label="Navegacao principal">
+      <nav className="topnav" aria-label="Navegação principal">
         <a href="#about">Sobre</a>
         <a href="#stack">Stack</a>
         <a href="#projects">Projetos</a>
@@ -16,7 +16,7 @@ function Header() {
 
       <div className="status-chip">
         <span className="status-led" />
-        <span>Disponivel para projetos</span>
+        <span>Disponível para projetos</span>
       </div>
     </header>
   );

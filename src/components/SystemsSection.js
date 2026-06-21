@@ -2,8 +2,8 @@ function SystemsSection({ differentials, stackItems }) {
   return (
     <section className="systems-section" id="experience">
       <div className="section-heading narrow">
-        <p className="eyebrow">Experiencia / Diferenciais</p>
-        <h2>Base tecnica com disciplina operacional e evolucao continua.</h2>
+        <p className="eyebrow">Experiência / Diferenciais</p>
+        <h2>Base técnica com disciplina operacional e evolução contínua.</h2>
       </div>
 
       <div className="experience-layout">
@@ -20,8 +20,8 @@ function SystemsSection({ differentials, stackItems }) {
         <aside className="surface-card experience-sidecard">
           <span className="panel-label">Execution deck</span>
           <p>
-            Atuacao voltada a manutencao de sistemas, criacao de modulos, APIs,
-            SQL, ETL, integracoes e automacoes com leitura clara do contexto.
+            Atuação voltada à manutenção de sistemas, criação de módulos, APIs,
+            SQL, ETL, integrações e automações com leitura clara do contexto.
           </p>
           <div className="hero-stackline">
             {stackItems.map((item) => (

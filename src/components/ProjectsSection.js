@@ -28,8 +28,8 @@ function ProjectsSection({
     <section className="projects-section" id="projects">
       <div className="section-heading">
         <p className="eyebrow">Projetos</p>
-        <h2>Projetos apresentados com contexto, solucao aplicada e resultado de forma clara.</h2>
-        <p>Selecione um projeto para visualizar o desafio, a solucao desenvolvida e os principais resultados da entrega.</p>
+        <h2>Projetos apresentados com contexto, solução aplicada e resultado de forma clara.</h2>
+        <p>Selecione um projeto para visualizar o desafio, a solução desenvolvida e os principais resultados da entrega.</p>
       </div>
 
       <div className="filter-bar" role="tablist" aria-label="Filtrar projetos">
@@ -115,7 +115,7 @@ function ProjectsSection({
                 aria-selected={activeDetailTab === 'overview'}
                 onClick={() => setActiveDetailTab('overview')}
               >
-                Visao geral
+                Visão geral
               </button>
               <button
                 className={`tab-pill${activeDetailTab === 'execution' ? ' is-active' : ''}`}
@@ -124,7 +124,7 @@ function ProjectsSection({
                 aria-selected={activeDetailTab === 'execution'}
                 onClick={() => setActiveDetailTab('execution')}
               >
-                Execucao
+                Execução
               </button>
               <button
                 className={`tab-pill${activeDetailTab === 'validation' ? ' is-active' : ''}`}
@@ -133,7 +133,7 @@ function ProjectsSection({
                 aria-selected={activeDetailTab === 'validation'}
                 onClick={() => setActiveDetailTab('validation')}
               >
-                Validacao
+                Validação
               </button>
             </div>
 
@@ -142,7 +142,7 @@ function ProjectsSection({
                 <p className="preview-text">{activeProject.summary}</p>
                 <div className={`project-preview-visual is-${activeProject.mock.accent}`}>
                   <div className="project-preview-visual-top">
-                    <span>Visao do projeto</span>
+                    <span>Visão do projeto</span>
                     <span>{activeProject.mock.title}</span>
                   </div>
                   <div className="project-preview-metrics">
@@ -171,7 +171,7 @@ function ProjectsSection({
                   </div>
 
                   <div className="project-preview-block project-fact-card">
-                    <span className="project-block-label">Solucao desenvolvida</span>
+                    <span className="project-block-label">Solução desenvolvida</span>
                     <p>{activeProject.result}</p>
                   </div>
 
@@ -186,7 +186,7 @@ function ProjectsSection({
             {activeDetailTab === 'validation' ? (
               <div className="project-detail-panel">
                 <div className="project-preview-block project-verification-block">
-                  <span className="project-block-label">Verificacao do case</span>
+                  <span className="project-block-label">Verificação do case</span>
                   <ul className="project-verification-list">
                     {activeProject.verification.map((item) => (
                       <li key={item}>{item}</li>

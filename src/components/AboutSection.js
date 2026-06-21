@@ -7,10 +7,10 @@ function AboutSection({ aboutPoints, coreAreas, workExperience }) {
     <section className="about-section" id="about">
       <div className="section-heading narrow">
         <p className="eyebrow">Sobre mim</p>
-        <h2>Perfil profissional, experiencia e forma de atuacao apresentados de maneira clara e objetiva.</h2>
+        <h2>Perfil profissional, experiência e forma de atuação apresentados de maneira clara e objetiva.</h2>
       </div>
 
-      <div className="tab-bar about-tab-bar" role="tablist" aria-label="Informacoes sobre Elias">
+      <div className="tab-bar about-tab-bar" role="tablist" aria-label="Informações sobre Elias">
         <button
           className={`tab-pill${activeTab === 'perfil' ? ' is-active' : ''}`}
           type="button"
@@ -27,7 +27,7 @@ function AboutSection({ aboutPoints, coreAreas, workExperience }) {
           aria-selected={activeTab === 'experiencia'}
           onClick={() => setActiveTab('experiencia')}
         >
-          Experiencia
+          Experiência
         </button>
         <button
           className={`tab-pill${activeTab === 'atuacao' ? ' is-active' : ''}`}
@@ -62,22 +62,22 @@ function AboutSection({ aboutPoints, coreAreas, workExperience }) {
             <div className="about-method-list">
               <div className="about-method-item">
                 <span className="panel-label">Leitura do contexto</span>
-                <p>Entendimento do sistema, da operacao e do problema antes de propor ajustes ou novas entregas.</p>
+                <p>Entendimento do sistema, da operação e do problema antes de propor ajustes ou novas entregas.</p>
               </div>
               <div className="about-method-item">
-                <span className="panel-label">Execucao objetiva</span>
-                <p>Implementacao com foco em estrutura limpa, clareza de fluxo e impacto real no uso do sistema.</p>
+                <span className="panel-label">Execução objetiva</span>
+                <p>Implementação com foco em estrutura limpa, clareza de fluxo e impacto real no uso do sistema.</p>
               </div>
               <div className="about-method-item">
-                <span className="panel-label">Evolucao continua</span>
-                <p>Melhorias incrementais, manutencao disciplinada e automacao quando isso realmente reduz atrito operacional.</p>
+                <span className="panel-label">Evolução contínua</span>
+                <p>Melhorias incrementais, manutenção disciplinada e automação quando isso realmente reduz atrito operacional.</p>
               </div>
             </div>
           ) : null}
         </article>
 
         <aside className="surface-card about-sidecard">
-          <span className="panel-label">Areas de atuacao</span>
+          <span className="panel-label">Áreas de atuação</span>
           <div className="about-keypoints">
             {coreAreas.map((item) => (
               <span key={item}>{item}</span>
